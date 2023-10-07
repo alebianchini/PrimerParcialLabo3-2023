@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 altaVehiculo(nuevoVehiculo, vehichulos);
             }
             else {
-                //modifAnuncio(nuevoVehiculo);
+                //modifVehiculo(nuevoVehiculo);
             }
         }
         else if (inputCantPue.value === '' && inputCantRue.value === '') {
@@ -158,7 +158,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 altaVehiculo(nuevoVehiculo, vehichulos);
             }
             else {
-                //modifAnuncio(nuevoVehiculo);
+                //modifVehiculo(nuevoVehiculo);
             }
         }
 
@@ -172,13 +172,14 @@ function altaVehiculo(nuevoVehiculo, vehichulos) {
     listarObjetos(vehichulos);
 }
 
-function modifVehiculo(nuevoVehiculo, vehichulos){
+
+/*function modifVehiculo(nuevoVehiculo, vehichulos){
     let indice = vehichulos.findIndex((vehiculo)=>{
         return vehiculo.id == nuevoVehiculo.id;
     });
     vehichulos.splice(indice, 1, nuevoAnuncio);
-    actualizarStorage(vehichulos);
-}
+    listarObjetos(vehichulos);
+}*/
 
 function actualizarStorage(data) {
     localStorage.setItem("datosActuales", JSON.stringify(data));
